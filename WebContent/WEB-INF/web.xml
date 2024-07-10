@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app id="WebApp_ID">
+	<display-name>crudOperation</display-name>
+	<servlet>
+		<servlet-name>Registration</servlet-name>
+		<display-name>Registration</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.Registration</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>loginBackend</servlet-name>
+		<display-name>loginBackend</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.loginBackend</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>registerBackend</servlet-name>
+		<display-name>registerBackend</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.registerBackend</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SearchBackend</servlet-name>
+		<display-name>SearchBackend</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.SearchBackend</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateData</servlet-name>
+		<display-name>UpdateData</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.UpdateData</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteBackend</servlet-name>
+		<display-name>DeleteBackend</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.DeleteBackend</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ViewData</servlet-name>
+		<display-name>ViewData</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.ViewData</servlet-class>
+	</servlet>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<servlet-mapping>
+		<servlet-name>Registration</servlet-name>
+		<url-pattern>/Registration</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>loginBackend</servlet-name>
+		<url-pattern>/loginBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>registerBackend</servlet-name>
+		<url-pattern>/registerBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchBackend</servlet-name>
+		<url-pattern>/SearchBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateData</servlet-name>
+		<url-pattern>/UpdateData</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteBackend</servlet-name>
+		<url-pattern>/DeleteBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewData</servlet-name>
+		<url-pattern>/ViewData</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
