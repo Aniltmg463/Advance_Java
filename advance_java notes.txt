@@ -1,0 +1,2 @@
+session : data store in server
+cookie: data store in client

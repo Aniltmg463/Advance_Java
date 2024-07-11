@@ -1,0 +1,151 @@
+//exceptionerroraPage.jsp
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"
+    isErrorPage="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Error Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .error-message {
+        background-color: #ffe0e0;
+        color: #ff0000;
+        border: 1px solid #ff0000;
+        padding: 20px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+    <div class="error-message">
+        <h2>An error occurred</h2>
+        <p><strong>Error Message:</strong> <%= exception.getMessage() %></p>
+    </div>
+</body>
+</html>
+
+
+
+
+//exceptionGetInt.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Division Result</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .result-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+    <div class="result-container">
+        <%
+        try {
+            // Retrieve parameters from request
+            String num1 = request.getParameter("fvalue");
+            String num2 = request.getParameter("svalue");
+
+            // Convert parameters to integers
+            int var1 = Integer.parseInt(num1);
+            int var2 = Integer.parseInt(num2);
+
+            // Perform division and display the result
+            int r = var1 / var2;
+            out.print("Output is: " + r);
+        } catch (NumberFormatException e) {
+            // Handle invalid integer input
+            out.print("Error: Please enter valid integers.");
+        } catch (ArithmeticException e) {
+            // Handle division by zero
+            out.print("Error: Division by zero is not allowed.");
+        } catch (Exception e) {
+            // Handle any other exceptions
+            out.print("An unexpected error occurred: " + e.getMessage());
+        }
+        %>
+    </div>
+</body>
+</html>
+
+
+
+
+//exceptionPage.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Division Result</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .result-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+    <div class="result-container">
+        <%
+        try {
+            // Retrieve parameters from request
+            String num1 = request.getParameter("fvalue");
+            String num2 = request.getParameter("svalue");
+
+            // Convert parameters to integers
+            int var1 = Integer.parseInt(num1);
+            int var2 = Integer.parseInt(num2);
+
+            // Perform division and display the result
+            int r = var1 / var2;
+            out.print("Output is: " + r);
+        } catch (NumberFormatException e) {
+            // Handle invalid integer input
+            out.print("Error: Please enter valid integers.");
+        } catch (ArithmeticException e) {
+            // Handle division by zero
+            out.print("Error: Division by zero is not allowed.");
+        } catch (Exception e) {
+            // Handle any other exceptions
+            out.print("An unexpected error occurred: " + e.getMessage());
+        }
+        %>
+    </div>
+</body>
+</html>
