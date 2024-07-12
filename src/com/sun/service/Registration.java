@@ -1,7 +1,6 @@
 package com.sun.service;
 
 import java.io.IOException;
-
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Servlet implementation class Registration
+ */
 public class Registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,29 +40,26 @@ public class Registration extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
 		try
 		{
-			String fname = request.getParameter("fname");
-			String lname = request.getParameter("lname");
-			String email = request.getParameter("emailid");
-			String userid = request.getParameter("username");
-			String password = request.getParameter("password");
+			String firstname = request.getParameter("fname");
+			String lastname = request.getParameter("lname");
+			String email = request.getParameter("email");
+			String username = request.getParameter("uname");
+			String password = request.getParameter("pass");
 			
-			Class.forName ("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/db_crud", "root", "123");
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/crudOperation","root","123");
 			Statement stm = con.createStatement();
-			stm.executeUpdate
-			("insert into tb_register values" + "('"+fname+"', '"+lname+"', '"+email+"', '"+userid+"', '"+password+"')");
+			stm.executeUpdate("insert into tb_register_data values"+"('"+firstname+"','"+lastname+"','"+email+"','"+username+"','"+password+"')");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.forward(request,response);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
-            rd.forward(request, response);
-
-            stm.close();
-            con.close();
 		}
-		catch (Exception e)
+		catch(Exception e)
 		{
-			System.out.print("Error" +e);
+			out.println("Error " + e);
 			e.printStackTrace();
 		}
 	}

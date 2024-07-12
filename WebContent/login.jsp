@@ -7,37 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Login Page</h1>
-
-    <%-- Display error message if present --%>
-    <% String error = request.getParameter("error");
-       if (error != null && !error.isEmpty()) { %>
-        <div class="error"><%= error %></div>
-    <% } %>
-
-    <form action="LoginPage" method="post">
-        <table>
-            <tr>
-                <td>User name:</td>
-                <td><input type="text" name="username"></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Login">
-                    <input type="reset" value="Reset">
-                </td>
-            </tr>
-        </table>
-        
-    </form>
-     <div class="register-link">
-        Don't have an account? <a href="form.jsp">Register here</a>
-    </div>
-
+<form action="loginBackend" method = "post">
+	<table>
+		<tr><h1>Login</h1></tr>
+		<tr><td>Username:</td><td><input type="text" name="username" required></td></tr>
+		<tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
+		<tr><td colspan="2"><input type="submit" value="login"></td></tr>
+		<tr><td>New account? </td><td><a href="Register.jsp">Sign up</a></td></tr>
+	</table>
+</form>
 
 </body>
 </html>

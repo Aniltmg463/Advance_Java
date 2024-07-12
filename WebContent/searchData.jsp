@@ -8,10 +8,10 @@
 </head>
 <body>
 <h1>Search the data</h1>
-<form action="SearchDB" method="post">
+<form action="SearchBackend" method="post">
 <table>
 	<tr>
-		<td><input type="text" placeholder="Enter E-mail" name="email"></td>
+		<td><input type="text" placeholder="Enter E-mail" name="Email"></td>
 		<td><input type="submit" value = "search"></td>
 	</tr>
 </table>

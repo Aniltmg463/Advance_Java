@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
 <web-app id="WebApp_ID">
-	<display-name>DatabaseExample1</display-name>
+	<display-name>crudOperation</display-name>
 	<servlet>
 		<servlet-name>Registration</servlet-name>
 		<display-name>Registration</display-name>
@@ -9,58 +9,16 @@
 		<servlet-class>com.sun.service.Registration</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>LoginPage</servlet-name>
-		<display-name>LoginPage</display-name>
+		<servlet-name>loginBackend</servlet-name>
+		<display-name>loginBackend</display-name>
 		<description></description>
-		<servlet-class>com.sun.service.LoginPage</servlet-class>
+		<servlet-class>com.sun.service.loginBackend</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>Success</servlet-name>
-		<display-name>Success</display-name>
+		<servlet-name>registerBackend</servlet-name>
+		<display-name>registerBackend</display-name>
 		<description></description>
-		<servlet-class>com.sun.service.Success</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Search</servlet-name>
-		<display-name>Search</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.Search</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Display</servlet-name>
-		<display-name>Display</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.Display</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>ViewDB</servlet-name>
-		<display-name>ViewDB</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.ViewDB</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Deletesuccess</servlet-name>
-		<display-name>Deletesuccess</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.Deletesuccess</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Updatesuccess</servlet-name>
-		<display-name>Updatesuccess</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.Updatesuccess</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>SearchSuccess</servlet-name>
-		<display-name>SearchSuccess</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.SearchSuccess</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>SearchDB</servlet-name>
-		<display-name>SearchDB</display-name>
-		<description></description>
-		<servlet-class>com.sun.service.SearchDB</servlet-class>
+		<servlet-class>com.sun.service.registerBackend</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>SearchBackend</servlet-name>
@@ -68,49 +26,62 @@
 		<description></description>
 		<servlet-class>com.sun.service.SearchBackend</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UpdateData</servlet-name>
+		<display-name>UpdateData</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.UpdateData</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteBackend</servlet-name>
+		<display-name>DeleteBackend</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.DeleteBackend</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ViewData</servlet-name>
+		<display-name>ViewData</display-name>
+		<description></description>
+		<servlet-class>com.sun.service.ViewData</servlet-class>
+	</servlet>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
 	<servlet-mapping>
 		<servlet-name>Registration</servlet-name>
 		<url-pattern>/Registration</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>LoginPage</servlet-name>
-		<url-pattern>/LoginPage</url-pattern>
+		<servlet-name>loginBackend</servlet-name>
+		<url-pattern>/loginBackend</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>Success</servlet-name>
-		<url-pattern>/Success</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Search</servlet-name>
-		<url-pattern>/Search</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Display</servlet-name>
-		<url-pattern>/Display</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ViewDB</servlet-name>
-		<url-pattern>/ViewDB</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Deletesuccess</servlet-name>
-		<url-pattern>/Deletesuccess</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Updatesuccess</servlet-name>
-		<url-pattern>/Updatesuccess</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>SearchSuccess</servlet-name>
-		<url-pattern>/SearchSuccess</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>SearchDB</servlet-name>
-		<url-pattern>/SearchDB</url-pattern>
+		<servlet-name>registerBackend</servlet-name>
+		<url-pattern>/registerBackend</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>SearchBackend</servlet-name>
 		<url-pattern>/SearchBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateData</servlet-name>
+		<url-pattern>/UpdateData</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteBackend</servlet-name>
+		<url-pattern>/DeleteBackend</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewData</servlet-name>
+		<url-pattern>/ViewData</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

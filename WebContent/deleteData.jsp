@@ -5,11 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h1>sucessfull Registered Student Information</h1>
- <div class="register-link">
-        Don't have an account? <a href="homepage.jsp">Go to HomePage</a>
-    </div>
+
+<h1>Delete the data</h1>
+<form action="DeleteBackend" method="post">
+
+<table>
+	<tr>
+		<td><input type="text" placeholder="Enter E-mail" name="email"></td>
+		<td><input type="submit" value = "Delete"></td>
+		<td><a href="home.jsp" class = "button">Home</a></td>
+	</tr>
+</table>
+</form>
+
 </body>
 </html>
