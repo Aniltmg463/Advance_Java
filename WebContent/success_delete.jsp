@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Delete successfully</h1>
+  <div class="register-link">
+        Don't have an account? <a href="homepage.jsp">Go TO Homepage</a>
+    </div>
 </body>
 </html>

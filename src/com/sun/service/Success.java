@@ -1,7 +1,6 @@
 package com.sun.service;
 
 import java.io.IOException;
-
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,13 +12,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Registration extends HttpServlet {
+/**
+ * Servlet implementation class Success
+ */
+public class Success extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Registration() {
+    public Success() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,19 +42,28 @@ public class Registration extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try
 		{
-			String fname = request.getParameter("fname");
-			String lname = request.getParameter("lname");
-			String email = request.getParameter("emailid");
-			String userid = request.getParameter("username");
-			String password = request.getParameter("password");
+			String Course = request.getParameter("courseOffered");
+			String firstname = request.getParameter("fname");
+			String lastname = request.getParameter("lname");
+			String pname = request.getParameter("parentName");
+			String Gender = request.getParameter("gender");
+			String DOB = request.getParameter("dob");
+			String JoinDate = request.getParameter("joinDate");
+			String Nationality = request.getParameter("nationality");
+			String Address = request.getParameter("address");
+			String Email = request.getParameter("email");
+			String Contact = request.getParameter("contact");
+		
+	
 			
 			Class.forName ("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/db_crud", "root", "123");
 			Statement stm = con.createStatement();
 			stm.executeUpdate
-			("insert into tb_register values" + "('"+fname+"', '"+lname+"', '"+email+"', '"+userid+"', '"+password+"')");
+			("insert into std_registration values" + "('"+Course+"', '"+firstname+"', '"+lastname+"', '"+pname+"', " +
+					"'"+Gender+"', '"+DOB+"', '"+JoinDate+"', '"+Nationality+"', '"+Address+"', '"+Email+"', '"+Contact+"')");
 			
-			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("success_std_reg.jsp");
             rd.forward(request, response);
 
             stm.close();

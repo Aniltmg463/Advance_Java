@@ -7,16 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Search the data</h1>
-<form action="SearchDB" method="post">
-<table>
-	<tr>
-		<td><input type="text" placeholder="Enter E-mail" name="email"></td>
-		<td><input type="submit" value = "search"></td>
-	</tr>
-</table>
-</form>
-
-
+<h1>Date Update successfully</h1>
+<a href="homepage.jsp">Go TO Homepage</a>
 </body>
 </html>

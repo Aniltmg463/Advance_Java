@@ -10,8 +10,8 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h1>Here's data</h1>
-<form>
+<h1>Here's the all data of Database</h1>
+<form action = "ViewDB" method = "post">
 	<a href="homepage.jsp" class = "button">Home</a>
 	<% if(request.getAttribute("Result")!= null){
 		List<Registration> obj = (List<Registration>)request.getAttribute("Result");%>
